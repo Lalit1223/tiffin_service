@@ -1,19 +1,28 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// Get the modal
+const modal = document.getElementById("orderFormModal");
 
-if (mobileMenuBtn) {
-  mobileMenuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+// Get the <span> element that closes the modal
+const closeBtn = document.getElementsByClassName("close-modal")[0];
+
+// Function to open the modal
+function openOrderForm() {
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
 }
 
-// Close mobile menu when clicking on links
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-  });
-});
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto"; // Restore scrolling
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Restore scrolling
+  }
+};
 
 // Header scroll effect
 window.addEventListener("scroll", () => {
@@ -37,6 +46,9 @@ window.addEventListener("scroll", () => {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     if (this.getAttribute("href") === "#") return;
+
+    // Don't apply smooth scroll to Order Now links that should open the modal
+    if (this.getAttribute("href") === "#order-form") return;
 
     e.preventDefault();
 

@@ -49,14 +49,6 @@
             <img src="./assets/logo.png" alt="Logo" class="logo-img" />
             <h1>HOT DABBA</h1>
           </a>
-          <button class="mobile-menu-btn">☰</button>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
         </nav>
       </div>
     </header>
@@ -78,12 +70,78 @@
             </p>
           </div>
           <div class="hero-right">
-            <a href="#" class="btn">Order Now</a>
+            <h3 class="menu-title">OUR MENU</h3>
+            <p class="menu-subtitle">
+              Delicious, homemade meals delivered to your doorstep
+            </p>
+
+            <!-- Mini menu in hero section -->
+            <div class="hero-menu-cards">
+              <div class="hero-menu-card">
+                <div class="hero-menu-img">
+                  <img src="./assets/veg1.jpg" alt="Regular 1 Veg Meal" />
+                </div>
+                <div class="hero-menu-header">
+                  <h4>REGULAR 1</h4>
+                  <p>VEG MEAL</p>
+                </div>
+                <div class="hero-menu-body">
+                  <div class="hero-menu-item">3 Phulka Roti</div>
+                  <div class="hero-menu-item">Veg Sabji</div>
+                  <div class="hero-menu-item">Dal</div>
+                  <div class="hero-menu-item">Rice</div>
+                </div>
+                <div class="hero-menu-footer">
+                  <div class="hero-price">₹ 120/-</div>
+                </div>
+              </div>
+
+              <div class="hero-menu-card">
+                <div class="hero-menu-img">
+                  <img src="./assets/veg2.jpg" alt="Regular 2 Veg Meal" />
+                </div>
+                <div class="hero-menu-header">
+                  <h4>REGULAR 2</h4>
+                  <p>VEG MEAL</p>
+                </div>
+                <div class="hero-menu-body">
+                  <div class="hero-menu-item">3 Phulka Roti</div>
+                  <div class="hero-menu-item">Veg Sabji</div>
+                  <div class="hero-menu-item-empty">-</div>
+                  <div class="hero-menu-item-empty">-</div>
+                </div>
+                <div class="hero-menu-footer">
+                  <div class="hero-price">₹ 80/-</div>
+                </div>
+              </div>
+
+              <div class="hero-menu-card">
+                <div class="hero-menu-img">
+                  <img src="./assets/nonVeg.jpg" alt="Non-Veg Meal" />
+                </div>
+                <div class="hero-menu-header">
+                  <h4>NON-VEG</h4>
+                  <p>MEAL</p>
+                </div>
+                <div class="hero-menu-body">
+                  <div class="hero-menu-item">3 Phulka Roti</div>
+                  <div class="hero-menu-item">Egg/Chicken</div>
+                  <div class="hero-menu-item">Rice</div>
+                  <div class="hero-menu-item-empty">-</div>
+                </div>
+                <div class="hero-menu-footer">
+                  <div class="hero-price">₹ 150/-</div>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="openOrderForm()" class="btn order-btn">
+              Order Now
+            </button>
           </div>
         </div>
       </div>
     </section>
-
     <section class="features">
       <div class="container">
         <div class="features-intro">
@@ -215,179 +273,7 @@
             </p>
           </div>
           <div class="about-img animate">
-            <img src="./assets/6380778.jpg" alt="Hot Dabba Tiffin Service" />
-          </div>
-        </div>
-        <div class="tagline-bottom animate">
-          <h3>Bringing 'Maa-ke-haath' ka khana to your doorstep!</h3>
-          <p>
-            Our home made snacks are the way to bring you quality binge-time
-            experiences. We've stocked a range of yummy goodies that will
-            enliven your taste buds and make you come back for more.
-          </p>
-
-          <div class="feature-icons">
-            <div class="feature-icon-item">
-              <div class="icon-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M5 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-1"
-                  ></path>
-                  <path d="M16 6l-4-4-4 4"></path>
-                  <path d="M12 2v13"></path>
-                </svg>
-              </div>
-              <span>Free Delivery</span>
-            </div>
-
-            <div class="feature-icon-item">
-              <div class="icon-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9 12l2 2 4-4"></path>
-                </svg>
-              </div>
-              <span>Premium Quality</span>
-            </div>
-
-            <div class="feature-icon-item">
-              <div class="icon-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
-              </div>
-              <span>Handmade</span>
-            </div>
-
-            <div class="feature-icon-item">
-              <div class="icon-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                  <line x1="12" y1="12" x2="12" y2="12"></line>
-                  <circle cx="12" cy="12" r="1"></circle>
-                  <circle cx="7" cy="12" r="1"></circle>
-                  <circle cx="17" cy="12" r="1"></circle>
-                </svg>
-              </div>
-              <span>Cash on Delivery</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="menu" class="menu">
-      <div class="container">
-        <h2 class="section-title">OUR MENU</h2>
-        <p class="section-subtitle">
-          Delicious, homemade meals delivered to your doorstep
-        </p>
-        <div class="menu-cards">
-          <div class="menu-card animate">
-            <div class="menu-img">
-              <img src="./assets/veg1.jpg" alt="Regular 1 Veg Meal" />
-            </div>
-            <div class="menu-header">
-              <h3>REGULAR 1</h3>
-              <p>VEG MEAL</p>
-              <div class="menu-badge">Popular</div>
-            </div>
-            <div class="menu-body">
-              <div class="menu-item">3 Phulka Roti</div>
-              <div class="menu-item">Veg Sabji</div>
-              <div class="menu-item">Dal</div>
-              <div class="menu-item">Rice</div>
-              <div class="menu-item">(Complimentary) Pickle & Salad</div>
-            </div>
-            <div class="menu-footer">
-              <div class="price">₹ 120/-</div>
-              <a href="#contact" class="btn" style="margin-top: 15px"
-                >Order Now</a
-              >
-            </div>
-          </div>
-
-          <div class="menu-card animate" style="animation-delay: 0.2s">
-            <div class="menu-img">
-              <img src="./assets/veg2.jpg" alt="Regular 2 Veg Meal" />
-            </div>
-            <div class="menu-header">
-              <h3>REGULAR 2</h3>
-              <p>VEG MEAL</p>
-              <div class="menu-badge">Budget</div>
-            </div>
-            <div class="menu-body">
-              <div class="menu-item">3 Phulka Roti</div>
-              <div class="menu-item">Veg Sabji</div>
-              <div class="menu-item" style="opacity: 0.5">-</div>
-              <div class="menu-item" style="opacity: 0.5">-</div>
-              <div class="menu-item">(Complimentary) Pickle & Salad</div>
-            </div>
-            <div class="menu-footer">
-              <div class="price">₹ 80/-</div>
-              <a href="#contact" class="btn" style="margin-top: 15px"
-                >Order Now</a
-              >
-            </div>
-          </div>
-
-          <div class="menu-card animate" style="animation-delay: 0.4s">
-            <div class="menu-img">
-              <img src="./assets/nonVeg.jpg" alt="Non-Veg Meal" />
-            </div>
-            <div class="menu-header">
-              <h3>NON-VEG</h3>
-              <p>MEAL</p>
-              <div class="menu-badge">Special</div>
-            </div>
-            <div class="menu-body">
-              <div class="menu-item">3 Phulka Roti</div>
-              <div class="menu-item">Egg curry or Chicken curry</div>
-              <div class="menu-item" style="opacity: 0.5">-</div>
-              <div class="menu-item">Rice</div>
-              <div class="menu-item">(Complimentary) Pickle & Salad</div>
-            </div>
-            <div class="menu-footer">
-              <div class="price">₹ 150/-</div>
-              <div class="note">Available on Wednesday & Friday</div>
-              <a href="#contact" class="btn" style="margin-top: 15px"
-                >Order Now</a
-              >
-            </div>
+            <img src="./assets/tiffin.jpg" alt="Hot Dabba Tiffin Service" />
           </div>
         </div>
       </div>
@@ -471,121 +357,6 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">CONTACT US</h2>
-        <p class="section-subtitle">We'd love to hear from you</p>
-        <div class="contact-content">
-          <div class="contact-info animate">
-            <div class="contact-item">
-              <!-- <div class="contact-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <h4>Phone</h4>
-                <p>+91 93265 74947</p>
-              </div> -->
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                  <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <h4>Email</h4>
-                <p>info@hotdabba.com</p>
-              </div>
-            </div>
-            <!-- <div class="contact-item">
-              <div class="contact-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                  ></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <h4>Location</h4>
-                <p>Serving all major areas in the city</p>
-              </div>
-            </div> -->
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <h4>Hours</h4>
-                <p>12:00 PM TO 4:00 PM</p>
-                <p>Daily service with FREE DELIVERY</p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-form animate">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeEqPHkPiTLQ2hwyIvH_SS69q8CGkHbP9o2xDVwAfMBR8Ljow/viewform?embedded=true"
-              width="100%"
-              height="689"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-            >
-              Loading…
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer>
       <div class="container">
         <div class="footer-content">
@@ -661,21 +432,14 @@
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
-              <li><a href="#menu">Our Menu</a></li>
               <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#" onclick="openOrderForm(); return false;"
+                  >Order Now</a
+                >
+              </li>
             </ul>
           </div>
-          <!-- <div class="footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#menu">Daily Tiffin</a></li>
-              <li><a href="#menu">Weekly Subscription</a></li>
-              <li><a href="#menu">Monthly Subscription</a></li>
-              <li><a href="#menu">Special Orders</a></li>
-              <li><a href="#contact">Corporate Orders</a></li>
-            </ul>
-          </div> -->
         </div>
         <div class="copyright">
           <p>
@@ -701,6 +465,23 @@
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
     </a>
+
+    <!-- Order Form Modal (hidden by default) -->
+    <div id="orderFormModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeEqPHkPiTLQ2hwyIvH_SS69q8CGkHbP9o2xDVwAfMBR8Ljow/viewform?embedded=true"
+          width="100%"
+          height="600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
